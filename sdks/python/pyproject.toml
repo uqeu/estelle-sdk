@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "estelle-agent"
+version = "0.1.0"
+description = "Thin typed instrumentation client for Estelle Agent events"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.urls]
+Source = "https://github.com/uqeu/estelle/tree/main/sdks/python"
+
+[tool.setuptools.packages.find]
+where = ["src"]

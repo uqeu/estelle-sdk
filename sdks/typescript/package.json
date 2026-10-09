@@ -1,0 +1,51 @@
+{
+  "name": "@fatelabs/estelle-agent",
+  "version": "0.1.0",
+  "description": "Thin typed instrumentation client for Estelle Agent events",
+  "license": "Apache-2.0",
+  "keywords": [
+    "observability",
+    "monitoring",
+    "opentelemetry",
+    "agent",
+    "tracing",
+    "estelle"
+  ],
+  "homepage": "https://fatelabs.ca",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uqeu/estelle-sdk.git",
+    "directory": "sdks/typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/uqeu/estelle-sdk/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

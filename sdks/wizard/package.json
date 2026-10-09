@@ -1,0 +1,54 @@
+{
+  "name": "@fatelabs/estelle-wizard",
+  "version": "0.1.0",
+  "description": "Installs Estelle monitoring into your repository, and audits that it actually reports",
+  "license": "Apache-2.0",
+  "keywords": [
+    "estelle",
+    "observability",
+    "monitoring",
+    "opentelemetry",
+    "instrumentation",
+    "wizard"
+  ],
+  "homepage": "https://fatelabs.ca",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uqeu/estelle-sdk.git",
+    "directory": "sdks/wizard"
+  },
+  "bugs": {
+    "url": "https://github.com/uqeu/estelle-sdk/issues"
+  },
+  "type": "module",
+  "bin": {
+    "estelle-wizard": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "prepack": "npm run build",
+    "test": "npm run build && node test/gate.test.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "@types/node": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

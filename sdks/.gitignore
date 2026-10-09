@@ -1,0 +1,7 @@
+# build output and local junk — never ship these
+dist/
+node_modules/
+*.tgz
+__pycache__/
+*.egg-info/
+Untitled
